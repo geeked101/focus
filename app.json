@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Focus Alarm",
+    "slug": "focus-alarm",
+    "version": "3.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.focusalarm.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification", "audio"]
+      }
+    },
+    "android": {
+      "package": "com.focusalarm.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0f0f1a"
+      },
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#6366f1",
+          "androidMode": "default",
+          "androidCollapsedTitle": "Focus Alarm"
+        }
+      ],
+      "expo-av"
+    ]
+  }
+}
